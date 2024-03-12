@@ -11,6 +11,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
@@ -19,6 +20,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -41,6 +43,7 @@ public class Department {
     @JoinColumn(name = "created_by", nullable = false)
     private User createdBy;
 
-    @OneToMany(mappedBy = "taskswork", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "department", cascade = CascadeType.REMOVE)
     private List<TasksWork> tasksWorks = new ArrayList<>();
+
 }
