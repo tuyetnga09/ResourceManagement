@@ -16,4 +16,18 @@ public class TasksWorkMapper {
                 .department(tasksWork.getDepartment())
                 .build();
     }
+
+    public static TasksWork mapToTasksWork(TasksWorkDTO tasksWorkDTO) {
+        TasksWork tasksWork = TasksWork.builder()
+                .id(tasksWorkDTO.getId())
+                .name(tasksWorkDTO.getName())
+                .startTime(tasksWorkDTO.getStartTime())
+                .endTime(tasksWorkDTO.getEndTime())
+                .type(tasksWorkDTO.getType())
+                .createdOn(tasksWorkDTO.getCreatedOn())
+                .updatedOn(tasksWorkDTO.getUpdatedOn())
+                .build();
+        return  tasksWork;
+    }
+
 }

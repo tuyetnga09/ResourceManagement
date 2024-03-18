@@ -6,7 +6,7 @@ import com.example.resourcemanagement.models.Department;
 import java.util.List;
 
 public interface DepartmentService {
-    Department createDepartment(Long departmentId, DepartmentDTO departmentDTO);
+    Department createDepartment(DepartmentDTO departmentDTO);
     List<DepartmentDTO> findAll();
     DepartmentDTO findByDepartmentId(Long departmentId);
     void updateDepartment(DepartmentDTO departmentDTO);

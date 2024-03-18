@@ -32,6 +32,7 @@ public class TasksWork {
     private LocalDateTime createdOn;
     @UpdateTimestamp
     private LocalDateTime updatedOn;
+
     @ManyToOne
     @JoinColumn(name="department_id", nullable = false)
     private Department department;

@@ -1,9 +1,12 @@
 package com.example.resourcemanagement.dto;
 
 import jakarta.validation.constraints.NotEmpty;
+import lombok.Data;
 
+@Data
 public class RegistrationDTO {
     private Long id;
+
     @NotEmpty
     private String username;
     @NotEmpty
